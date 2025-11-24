@@ -1,17 +1,18 @@
 
-# SpeedOfLight
-A new Flutter project.
+https://github.com/user-attachments/assets/9b09a2ef-fbaa-4c7d-9870-6f0a9894e4c3
+Speed of light 
+It's an e-commerce mobile application wih features :
+1. Create account and login
+2. View user information and can update image profile
+3. View all stores
+4. Browse all products within each store
+5. View detailed product information
+6. Search for store
+7. Search for product inside a specific store
+8. Add product to a shopping cart with ability to view and modify quantities and see updates based on quantity
+9. After confirming the cart and completing the payment all ll orders are move to Purchases section
+10. View all purchases with their quantity and purchase date
+11. Add product to your favourites list
+12. Logout from user profile
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> 5294427 (project SpeedOfLight is a e-commerce)
+![logo_SpeedOfLight](https://github.com/user-attachments/assets/cb45672b-081f-45da-95fb-75a0473ec4b2)
