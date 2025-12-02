@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:delivery_app/constants.dart';
 import 'package:delivery_app/main.dart';
 import 'package:delivery_app/models/porduct_to_send.dart';
@@ -19,12 +18,7 @@ class Checkout extends StatelessWidget {
     final provider = AddToCartProvider.of(context);
     UserInfoModel? userInfoModel =
         Provider.of<UserinfoProvider>(context).userInfoModel;
-    return
-        // initialChildSize: 0.2,
-        // minChildSize: 0.1,
-        // maxChildSize: 0.4,
-
-        Container(
+    return  Container(
       width: double.infinity,
       height: 160,
       decoration: BoxDecoration(
@@ -34,7 +28,7 @@ class Checkout extends StatelessWidget {
           bottomLeft: Radius.circular(30),
         ),
       ),
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: SingleChildScrollView(
         //controller: scrollController,
         child: Column(
@@ -43,34 +37,34 @@ class Checkout extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Total",
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ),
                 Text(
                   "\$${provider.totalPrice()}",
-                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                  style: const TextStyle(color: Colors.grey, fontSize: 16),
                 ),
               ],
             ),
-            Divider(),
-            SizedBox(height: 20),
+            const Divider(),
+            const SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: kPrimaryColor,
-                minimumSize: Size(double.infinity, 40),
+                minimumSize: const Size(double.infinity, 40),
               ),
               onPressed: () async {
                 bool isTrue = true;
                 showDialog(
     context: context,
     barrierDismissible: false,
-    builder: (context) => Center(child: CircularProgressIndicator()),
+    builder: (context) => const Center(child: CircularProgressIndicator()),
   );
                 for (Product product in provider.cart) {
                   if (product.quantityToSend > product.quantity) {
                      Navigator.pop(context);
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       duration: Durations.long3,
                       content: Text('The quantity is not evalable!'),
                       backgroundColor: Colors.red,
@@ -97,7 +91,7 @@ class Checkout extends StatelessWidget {
                     
                   if (status) {
                      Navigator.pop(context);
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text('Order Successfully Added'),
                       backgroundColor: kPrimaryColor,
                     ));
@@ -105,7 +99,7 @@ class Checkout extends StatelessWidget {
                   }
                 }
               },
-              child: Text(
+              child: const Text(
                 "Check Out",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,

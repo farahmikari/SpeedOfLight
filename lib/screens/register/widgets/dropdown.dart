@@ -16,7 +16,7 @@ class _DropDownCountryState extends State<DropDownCountry> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
       child: Container(
-        padding: EdgeInsets.only(left: 16),
+        padding: const EdgeInsets.only(left: 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: Colors.black),
@@ -33,10 +33,10 @@ class _DropDownCountryState extends State<DropDownCountry> {
                 color: Colors.grey, fontFamily: "PatuaOne", fontSize: 18),
             items: const [
               DropdownMenuItem(
+                value: "select country",
                 child: Text(
                   "select country",
                 ),
-                value: "select country",
               ),
               DropdownMenuItem(
                 child: Text("Damascus",style: TextStyle(color: Colors.black),),
@@ -48,7 +48,7 @@ class _DropDownCountryState extends State<DropDownCountry> {
               )
             ],
             isExpanded: true,
-            underline: SizedBox.shrink(),
+            underline: const SizedBox.shrink(),
             iconSize: 40,
             onChanged: (String? countrySelected) {
               if (countrySelected != null &&

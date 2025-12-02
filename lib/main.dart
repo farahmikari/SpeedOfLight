@@ -1,6 +1,5 @@
-import 'package:delivery_app/models/user_info_model.dart';
 import 'package:delivery_app/providers/add_to_cart_provider.dart';
-import 'package:delivery_app/providers/te_provider.dart';
+import 'package:delivery_app/providers/favorite_provider.dart';
 import 'package:delivery_app/providers/product_details_provider.dart';
 import 'package:delivery_app/providers/products_provider.dart';
 import 'package:delivery_app/providers/stores_provider.dart';
@@ -8,7 +7,7 @@ import 'package:delivery_app/providers/userinfo_provider.dart';
 import 'package:delivery_app/screens/cart_screen/cart_screen.dart';
 import 'package:delivery_app/screens/favorite_screen/favorite_screen.dart';
 import 'package:delivery_app/screens/history_order_screen/orders_screen.dart';
-import 'package:delivery_app/screens/home_screen/widgets/navigatorBar.dart';
+import 'package:delivery_app/screens/home_screen/widgets/navigator_bar.dart';
 import 'package:delivery_app/screens/info_personal/info_personal_screen.dart';
 import 'package:delivery_app/screens/login/login_screen.dart';
 import 'package:delivery_app/screens/register/register_screen.dart';

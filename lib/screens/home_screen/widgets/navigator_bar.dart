@@ -75,7 +75,7 @@ class _NavigatorbarState extends State<Navigatorbar> {
                         showCloseIcon: true,
                       ).show();
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.logout,
                       color: Colors.white,
                     ),

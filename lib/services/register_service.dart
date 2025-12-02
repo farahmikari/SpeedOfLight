@@ -1,7 +1,5 @@
 import 'package:delivery_app/helper/api.dart';
 import 'package:delivery_app/models/user_info_model.dart';
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class RegisterService {
 

@@ -2,7 +2,7 @@ import 'package:delivery_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class InfoPersonalContainer extends StatelessWidget {
-  InfoPersonalContainer({required this.text,required this.icon});
+  InfoPersonalContainer({super.key, required this.text,required this.icon});
 
   String text;
   dynamic icon;
@@ -12,7 +12,7 @@ class InfoPersonalContainer extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           width: size.width,
           height: 55,
           child: Row(
@@ -24,7 +24,7 @@ class InfoPersonalContainer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 40),
                 child: Text( text,
-                  style: TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15),
                 ),
               ),
             ],

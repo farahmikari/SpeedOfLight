@@ -10,7 +10,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
 class ImageProfile extends StatefulWidget {
-  ImageProfile({this.imageFromUser});
+  ImageProfile({super.key, this.imageFromUser});
 
   dynamic imageFromUser;
   @override
@@ -26,7 +26,7 @@ class _ImageProfileState extends State<ImageProfile> {
     UserInfoModel? userInfoModel =
         Provider.of<UserinfoProvider>(context).userInfoModel;
 
-    Future<void> _pickImageFromGallery() async {
+    Future<void> pickImageFromGallery() async {
       final pickedFile = await ImagePicker()
           .pickImage(source: ImageSource.gallery, imageQuality: 80);
       setState(() {
@@ -56,24 +56,24 @@ class _ImageProfileState extends State<ImageProfile> {
     }
 
     return GestureDetector(
-        onTap: _pickImageFromGallery,
+        onTap: pickImageFromGallery,
         child: Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(75),border: Border.all(color: Colors.black)),
           child: CircleAvatar(
               backgroundColor: Colors.white,
               radius: 50,
-              child: Icon(
-                Icons.person,
-                size: 70,
-                color: kPrimaryColor,
-              ),
               foregroundImage:
                   (widget.imageFromUser == null) && (image == null)
                       ? null
                       : image != null
                           ? Image.file(image!, width: 100, fit: BoxFit.cover)
                               .image
-                          : Image.network(widget.imageFromUser).image),
+                          : Image.network(widget.imageFromUser).image,
+              child: const Icon(
+                Icons.person,
+                size: 70,
+                color: kPrimaryColor,
+              )),
         ));
   }
 }

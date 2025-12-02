@@ -2,7 +2,7 @@ import 'package:delivery_app/constants.dart';
 import 'package:delivery_app/main.dart';
 import 'package:delivery_app/models/user_info_model.dart';
 import 'package:delivery_app/providers/userinfo_provider.dart';
-import 'package:delivery_app/screens/home_screen/widgets/navigatorBar.dart';
+import 'package:delivery_app/screens/home_screen/widgets/navigator_bar.dart';
 import 'package:delivery_app/screens/login/login_screen.dart';
 import 'package:delivery_app/screens/register/widgets/dropdown.dart';
 import 'package:delivery_app/screens/register/widgets/register_button.dart';
@@ -15,7 +15,7 @@ import 'package:provider/provider.dart';
 String? country;
 
 class RegisterScreen extends StatefulWidget {
-  RegisterScreen({super.key});
+  const RegisterScreen({super.key});
 
   static String id = "Register";
 
@@ -50,12 +50,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: Container(
                       width: size.width,
                       height: size.height * 0.6,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
                               kPrimaryColor,
-                              const Color(0xFFE57481),
-                              const Color(0xFFEFB8B8)
+                              Color(0xFFE57481),
+                              Color(0xFFEFB8B8)
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
@@ -69,7 +69,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Padding(
                         padding:
                             EdgeInsets.only(top: size.height * 0.1, left: 16),
-                        child: Text(
+                        child: const Text(
                           'Register',
                           style: TextStyle(
                             color: Colors.white,
@@ -77,25 +77,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Do you have an account ? '),
+                          const Text('Do you have an account ? '),
                           TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, LoginScreen.id);
                             },
-                            child: Text(
+                            child: const Text(
                               "Login",
                               style: TextStyle(color: kSecondaryColor),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       RegisterInfoWidget(
@@ -122,7 +122,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         errorText: ' phone number is less than 10 number',
                       ),
 
-                      DropDownCountry(),
+                      const DropDownCountry(),
                       RegisterInfoWidget(
                         hintText: 'City',
                         icon: const Icon(Icons.location_on),
@@ -162,7 +162,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           try {
                             await RegisterMethod(country: country);
                             print('succesful');
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                                duration: Durations.long3,
                               content: Text('register success!'),
                               backgroundColor: kPrimaryColor,
@@ -173,7 +173,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   arguments: userInfo);
                           } catch (e) {
                             print(e.toString());
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                                duration: Durations.long3,
                               content: Text('Please Try Again!'),
                               backgroundColor: Colors.red,

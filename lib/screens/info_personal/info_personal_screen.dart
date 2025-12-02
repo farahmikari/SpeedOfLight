@@ -31,25 +31,25 @@ class InfoPersonalScreen extends StatelessWidget {
                 Container(
                   width: size.width,
                   height: size.height * 0.25,
-                  child: Center(
-                      child: Text(
-                    '${snapshot.data!.firstName} ${snapshot.data!.lastName}',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  )),
                   decoration: const BoxDecoration(
                       color: kPrimaryColor,
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(60),
                           bottomRight: Radius.circular(60))),
+                  child: Center(
+                      child: Text(
+                    '${snapshot.data!.firstName} ${snapshot.data!.lastName}',
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  )),
                 ),
                 SingleChildScrollView(
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 150,
                       ),
                       ImageProfile(imageFromUser: snapshot.data!.image),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       InfoPersonalContainer(
@@ -99,7 +99,7 @@ class InfoPersonalScreen extends StatelessWidget {
                               showCloseIcon: true,
                           ).show();
                     },
-                            child: Row(
+                            child: const Row(
                               children: [
                                 Spacer(),
                                 Icon(
@@ -116,7 +116,7 @@ class InfoPersonalScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 5,),
+                      const SizedBox(height: 5,),
                     
                     ],
                   ),
@@ -124,7 +124,7 @@ class InfoPersonalScreen extends StatelessWidget {
               ],
             );
           } else {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }

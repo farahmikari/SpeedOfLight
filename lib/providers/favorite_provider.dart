@@ -1,6 +1,4 @@
 import 'package:delivery_app/models/product.dart';
-import 'package:delivery_app/providers/add_to_cart_provider.dart';
-import 'package:delivery_app/services/add_favorite_product.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

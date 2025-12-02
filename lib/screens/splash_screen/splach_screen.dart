@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:delivery_app/constants.dart';
 import 'package:delivery_app/main.dart';
-import 'package:delivery_app/screens/home_screen/widgets/navigatorBar.dart';
+import 'package:delivery_app/screens/home_screen/widgets/navigator_bar.dart';
 import 'package:delivery_app/screens/register/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';

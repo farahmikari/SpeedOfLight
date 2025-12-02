@@ -3,11 +3,9 @@ import 'package:delivery_app/constants.dart';
 import 'package:delivery_app/main.dart';
 import 'package:delivery_app/models/user_info_model.dart';
 import 'package:delivery_app/providers/userinfo_provider.dart';
-import 'package:delivery_app/screens/home_screen/widgets/navigatorBar.dart';
-import 'package:delivery_app/screens/info_personal/info_personal_screen.dart';
+import 'package:delivery_app/screens/home_screen/widgets/navigator_bar.dart';
 import 'package:delivery_app/screens/register/widgets/register_button.dart';
 import 'package:delivery_app/screens/register/widgets/register_info_widget.dart';
-import 'package:delivery_app/screens/home_screen/home_screen.dart';
 import 'package:delivery_app/services/login_service.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -66,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Padding(
                           padding:
                               EdgeInsets.only(top: size.height * 0.1, left: 16),
-                          child: Text(
+                          child: const Text(
                             'Welcome !',
                             style: TextStyle(
                               color: kPrimaryColor,
@@ -74,18 +72,18 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('Do you want to create an account ? '),
+                            const Text('Do you want to create an account ? '),
                             TextButton(
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                              child: Text(
+                              child: const Text(
                                 "Register",
                                 style: TextStyle(
                                     color: kPrimaryColor, fontSize: 16),
@@ -93,12 +91,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         RegisterInfoWidget(
                           hintText: 'Phone Number',
-                          icon: Icon(Icons.phone),
+                          icon: const Icon(Icons.phone),
                           onChanged: (data) {
                             phoneNumber = data;
                           },
@@ -107,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         RegisterInfoWidget(
                             hintText: 'Password',
-                            icon: Icon(Icons.lock),
+                            icon: const Icon(Icons.lock),
                             obscureText: true,
                             onChanged: (data) {
                               password = data;
@@ -127,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               print('succesful');
 
                               ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
+                                  .showSnackBar(const SnackBar(
                                 duration: Durations.long3,
                                 content: Text('Login success!'),
                                 backgroundColor: kPrimaryColor,
@@ -138,12 +136,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             } catch (e) {
                               print(e.toString());
                               AwesomeDialog(
-                                
                                   context: context,
                                   title: "Alert",
-                                  body: Text(
+                                  body: const Text(
                                       "your number is uncorrect or your password"))
-                                ..show();
+                                .show();
                             }
                             isLouding = false;
                             setState(() {});

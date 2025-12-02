@@ -1,11 +1,10 @@
-import 'package:delivery_app/constants.dart';
 import 'package:delivery_app/models/product.dart';
 import 'package:delivery_app/providers/add_to_cart_provider.dart';
 import 'package:delivery_app/screens/cart_screen/widgets/checkout.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatefulWidget {
-  CartScreen({super.key});
+  const CartScreen({super.key});
   static String id = "cart";
   static List<Product> products = [];
 
@@ -72,7 +71,7 @@ class _CartScreenState extends State<CartScreen> {
                     return Padding(
                       padding: const EdgeInsets.all(10),
                       child: ConstrainedBox(
-                        constraints: BoxConstraints(maxHeight: 145),
+                        constraints: const BoxConstraints(maxHeight: 145),
                         child: Container(
                           height: 150,
                           decoration: BoxDecoration(
@@ -120,12 +119,12 @@ class _CartScreenState extends State<CartScreen> {
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 10,
                                           ),
                                           Text(
                                             "${cartItems.price}",
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: Colors.grey,
                                               fontSize: 10,
                                             ),
@@ -152,7 +151,7 @@ class _CartScreenState extends State<CartScreen> {
                                         size: 20,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
                                     Container(
@@ -167,24 +166,24 @@ class _CartScreenState extends State<CartScreen> {
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           producerQuantity(Icons.add, index),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           Text(
                                             cartItems.quantityToSend.toString(),
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                           producerQuantity(Icons.remove, index),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 10,
                                           ),
                                         ],
@@ -201,7 +200,7 @@ class _CartScreenState extends State<CartScreen> {
                   },
                 ),
               ),
-              Checkout()
+              const Checkout()
             ],
           );
   }

@@ -1,11 +1,9 @@
 import 'package:delivery_app/constants.dart';
 import 'package:delivery_app/main.dart';
 import 'package:delivery_app/models/product.dart';
-import 'package:delivery_app/providers/favorite_provider.dart';
 import 'package:delivery_app/screens/products_screen/product_details_screen.dart';
 import 'package:delivery_app/services/get_favorite_product.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({super.key});
@@ -45,7 +43,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
             ),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               } else if (snapshot.hasData && snapshot.data!.isNotEmpty) {
@@ -66,8 +64,8 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                           );
                         },
                         child: Container(
-                            margin: EdgeInsets.all(12),
-                            padding: EdgeInsets.all(12),
+                            margin: const EdgeInsets.all(12),
+                            padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
                                 border:
                                     Border.all(color: kPrimaryColor, width: 2),
@@ -85,7 +83,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -97,13 +95,13 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         '${Favorite.name}',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color: kPrimaryColor,
                                         ),
                                       ),
                                       Text(
                                         'price : ${Favorite.price}',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontSize: 12,
                                           color: Colors.grey,
                                         ),
@@ -117,7 +115,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                       );
                     });
               } else {
-                return Center(
+                return const Center(
                   child: Text("No Favorite Products !",
                       style: TextStyle(
                         color: Colors.grey,

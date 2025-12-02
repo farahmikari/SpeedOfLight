@@ -15,10 +15,10 @@ class StoresScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Text(
           '$categoryName Stores',
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 18,
           ),
@@ -62,8 +62,8 @@ class StoresScreen extends StatelessWidget {
               const SizedBox(height: 10),
               // List of Stores
               value.items.isEmpty
-                  ? Padding(
-                    padding: const EdgeInsets.only(top: 200.0),
+                  ? const Padding(
+                    padding: EdgeInsets.only(top: 200.0),
                     child: Text(
                       "No item in this name !",
                       style: TextStyle(

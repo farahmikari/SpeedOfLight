@@ -1,16 +1,14 @@
 import 'package:delivery_app/constants.dart';
-import 'package:delivery_app/helper/api.dart';
 import 'package:delivery_app/main.dart';
 import 'package:delivery_app/models/product.dart';
-import 'package:delivery_app/screens/cart_screen/cart_screen.dart';
 import 'package:delivery_app/screens/products_screen/widgets/addTo_cart_botton.dart';
 import 'package:delivery_app/services/add_favorite_product.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
- Product product;
+final Product product;
 
-  ProductDetailsScreen({super.key, required this.product});
+  const ProductDetailsScreen({super.key, required this.product});
   static String id="details";
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
@@ -22,10 +20,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Text(
           widget.product.name ?? 'Product Name',
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 18,
           ),
@@ -64,7 +62,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
@@ -96,14 +94,14 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           )),
                       Text(
                         '${widget.product.price}' ?? '\$\$',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           color: Colors.grey,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                 ],
@@ -132,7 +130,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   borderRadius: BorderRadius.circular(50),
                   color: kPrimaryColor,
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     ' Description ',
                     style: TextStyle(
@@ -150,7 +148,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   color: Colors.grey[800],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               // Add to Cart Button

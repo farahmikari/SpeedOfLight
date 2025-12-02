@@ -1,12 +1,8 @@
 import 'package:delivery_app/constants.dart';
-import 'package:delivery_app/helper/api.dart';
 import 'package:delivery_app/main.dart';
 import 'package:delivery_app/models/product.dart';
-import 'package:delivery_app/models/user_info_model.dart';
-import 'package:delivery_app/providers/userinfo_provider.dart';
 import 'package:delivery_app/services/get_orders.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class OrdersScreen extends StatelessWidget {
   const OrdersScreen({super.key});
@@ -16,7 +12,7 @@ class OrdersScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
         title: const Text(
           'H I S T O R Y  O R D E R',
@@ -65,34 +61,34 @@ class OrdersScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
                                   Text(
                                     '${order.name}',
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 13,
                                     ),
                                   ),
                                   Text(
                                     'date order : ${date.day}-${date.month}-${date.year}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.grey,
                                       fontSize: 11,
                                     ),
                                   ),
                                   Text(
                                     'time order : ${date.hour}:${date.minute}:${date.second}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.grey,
                                       fontSize: 11,
                                     ),
                                   ),
                                   Text(
                                     'price : ${order.price}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 11,
                                     ),
                                   ),
@@ -108,7 +104,7 @@ class OrdersScreen extends StatelessWidget {
               );
             } else {
               print("history");
-              return Center(
+              return const Center(
                 // child: CircularProgressIndicator(),
                 child: Text(
                   'No Orders Yet !',
