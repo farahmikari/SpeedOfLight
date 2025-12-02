@@ -46,6 +46,6 @@ ______________________________________________________________
    flutter run   
    ```
 ______________________________________________________________
-## 🔗 Backend for this project**
+## 🔗 Backend for this project
 The backend source code is available here :
 https://github.com/FarahRam04/SpeedOfLight.git   
