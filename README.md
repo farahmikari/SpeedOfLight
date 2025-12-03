@@ -46,6 +46,57 @@ ______________________________________________________________
    flutter run   
    ```
 ______________________________________________________________
-## 🔗 Backend for this project**
-The backend source code is available here :
-https://github.com/FarahRam04/SpeedOfLight.git   
+## 🖥️ Backend framework
+
+Laravel 11
+______________________________________________________________
+## 🔗 Backend Setup
+The backend source code is available here in **master** branch  :
+https://github.com/FarahRam04/SpeedOfLight.git
+
+To run the backend project :
+  ```bash
+  # clone project 
+  git clone -b master https://github.com/FarahRam04/SpeedOfLight.git
+
+  # Navigate into the project
+  cd SpeedOfLight
+
+  # Install dependencies
+  composer install
+
+  # Generate application key
+  php artisan key:generate
+
+  # Run database migrations
+  php artisan migrate
+
+  # Create the environment file (The `.env` file is not included in the repository for security reasons.)
+  cp .env.example .env
+   # Open the newly created .env file and update the following values
+   APP_URL=http://127.0.0.1:8000
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+
+  # Run migrations + seed database
+  php artisan migrate:fresh --seed
+
+  # Link storage Folder
+  php artisan storage:link
+
+  # Start the Laravel development server
+  php artisan serve
+  ```
+______________________________________________________________
+## 🔗 API Base URL
+  ```bash
+  # update the flutter app baseURL in class Api 
+  http://127.0.0.1:8000/api
+
+  # update image in class Api
+  http://127.0.0.1:8000/storage/images/
+
+  ```
+______________________________________________________________
+
