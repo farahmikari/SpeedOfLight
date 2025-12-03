@@ -19,7 +19,7 @@ ______________________________________________________________
 8. Add products to the cart with quantity control and automated price updates  
 9. After completing the payment, all orders move to the Purchases section  
 10. View all past purchases with quantity and date  
-11. Add products to your **Favorites** list  
+11. Add products to your Favorites list  
 12. Logout  
 
 ______________________________________________________________
@@ -29,6 +29,16 @@ ______________________________________________________________
 Your environment must meet the following minimum requirements:
   dart: ">=3.8.0-0 <4.0.0"
   flutter: ">=3.24.0"
+  
+______________________________________________________________
+
+## 🧩 State Management & Local Storage
+
+This project uses:
+
+- **Provider** for state management  
+- **Shared Preferences** for local data persistence (saving user info, tokens, etc.)
+
 ______________________________________________________________
 
 ## 📦 Installation and Run Project
@@ -46,10 +56,13 @@ ______________________________________________________________
    flutter run   
    ```
 ______________________________________________________________
+
 ## 🖥️ Backend framework
 
 Laravel 11
+
 ______________________________________________________________
+
 ## 🔗 Backend Setup
 The backend source code is available here in **master** branch  :
 https://github.com/FarahRam04/SpeedOfLight.git
@@ -89,6 +102,7 @@ To run the backend project :
   php artisan serve
   ```
 ______________________________________________________________
+
 ## 🔗 API Base URL
   ```bash
   # update the flutter app baseURL in class Api 
@@ -99,4 +113,3 @@ ______________________________________________________________
 
   ```
 ______________________________________________________________
-
