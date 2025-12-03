@@ -42,7 +42,18 @@ This project uses:
 
 ______________________________________________________________
 
-## 📦 Installation and Run Project
+## 🚀 How to Run the Complete System (XAMPP + Backend + Frontend)
+
+Follow the steps below in the correct order to run the full project successfully:
+1. Before running the backend, make sure XAMPP services are running:
+- Start **Apache**
+- Start **MySQL**
+2. Then first run Backend Laravel project (following the steps explained below)
+3.Finally run Frontend Flutter project (following the steps explained below) 
+1ز
+______________________________________________________________
+
+## 📦 Installation and Run Flutter Project
    ```bash
    # clone project
    git clone https://github.com/farahmikari/SpeedOfLight.git
