@@ -27,6 +27,7 @@ ______________________________________________________________
 ## 🛠️ Flutter & Dart Version
 
 Your environment must meet the following minimum requirements:
+
   dart: ">=3.8.0-0 <4.0.0"
   flutter: ">=3.24.0"
   
