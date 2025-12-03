@@ -47,7 +47,7 @@ ______________________________________________________________
 - Start **Apache**  
 - Start **MySQL**  
 2. Then first run Backend Laravel project (following the steps explained below)  
-3.Finally run Frontend Flutter project (following the steps explained below)  
+3.Finally run Frontend Flutter project (following the steps explained below)
 
 ______________________________________________________________
 
